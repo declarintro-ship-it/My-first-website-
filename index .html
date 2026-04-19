@@ -105,3 +105,34 @@
 
 </body>
 </html>
+<div class="stats">
+    <p>🔥 Live Fans: <span id="visitorCount">0</span></p>
+    <p>🎯 YouTube Subscribers: <span id="subCount">Loading...</span></p>
+</div>
+.stats {
+    margin-bottom: 25px;
+    font-size: 1rem;
+    color: #00f2ff;
+    text-shadow: 0 0 10px #00f2ff;
+}
+<script>
+    // Fake Visitor Counter (auto increasing)
+    let count = localStorage.getItem("visitors") || 100;
+    count++;
+    localStorage.setItem("visitors", count);
+    document.getElementById("visitorCount").innerText = count;
+
+    // YouTube Subscriber Count (requires API key)
+    const apiKey = "YOUR_YOUTUBE_API_KEY";
+    const channelId = "UCXXXXXXXXXXXX"; // replace with your channel ID
+
+    fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`)
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("subCount").innerText =
+                data.items[0].statistics.subscriberCount;
+        })
+        .catch(() => {
+            document.getElementById("subCount").innerText = "Unavailable";
+        });
+</script>
