@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B3G GAMING | Official Hub</title>
+    <!-- Adding FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --neon-blue: #00f2ff;
+            --yt-red: #ff0000;
+            --ig-pink: #e1306c;
+            --fb-blue: #1877f2;
+            --wa-green: #25d366;
+            --ex-orange: #ffa500;
+            --ns-purple: #8a2be2;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #080808;
+            background-image: radial-gradient(circle at center, #111 0%, #050505 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 3.5rem);
+            margin-bottom: 5px;
+            color: #fff;
+            text-shadow: 0 0 15px var(--neon-blue);
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            color: var(--neon-blue);
+            margin-bottom: 25px;
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        /* Stats Styling */
+        .stats {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .stats p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--neon-blue);
+            font-weight: bold;
+        }
+
+        .stats span {
+            display: block;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .links-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.07);
+            padding: 16px 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .btn i {
+            font-size: 1.2rem;
+            width: 30px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            border-color: transparent;
+            color: #fff;
+        }
+
+        /* Brand Colors on Hover */
+        .yt:hover { background: var(--yt-red); box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); }
+        .ig:hover { background: var(--ig-pink); box-shadow: 0 0 20px rgba(225, 48, 108, 0.4); }
+        .fb:hover { background: var(--fb-blue); box-shadow: 0 0 20px rgba(24, 119, 242, 0.4); }
+        .wa:hover { background: var(--wa-green); box-shadow: 0 0 20px rgba(37, 211, 102, 0.4); }
+        .ex:hover { background: var(--ex-orange); box-shadow: 0 0 20px rgba(255, 165, 0, 0.4); }
+        .ns:hover { background: var(--ns-purple); box-shadow: 0 0 20px rgba(138, 43, 226, 0.4); }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.75rem;
+            color: #555;
+            letter-spacing: 1px;
+        }
+
+        /* Animation for live pulse */
+        .pulse {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #ff0000;
+            border-radius: 50%;
+            margin-right: 5px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>B3G GAMING</h1>
+        <div class="subtitle">Official Linktree</div>
+
+        <div class="stats">
+            <p><span class="pulse"></span>Live Fans <span id="visitorCount">0</span></p>
+            <p>YouTube Subs <span id="subCount">10K+</span></p>
+        </div>
+
+        <div class="links-grid">
+            <a href="https://youtube.com/@b3ggaming?si=V3xilWqXs3HHQCFg" target="_blank" class="btn yt">
+                <span><i class="fab fa-youtube"></i> YouTube Channel</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <a href="https://www.instagram.com/b3gga_ming?igsh=MWJqYWg3dDRtbDEzOQ==" target="_blank" class="btn ig">
+                <span><i class="fab fa-instagram"></i> Instagram</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61570396735329" target="_blank" class="btn fb">
+                <span><i class="fab fa-facebook-f"></i> Facebook Profile</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+
+            <a href="https://whatsapp.com/channel/0029VaVDq3DChq6FNobmlP2p" target="_blank" class="btn wa">
+                <span><i class="fab fa-whatsapp"></i> WhatsApp Channel</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+
+            <a href="https://explurger.com/pf/5l24xr6k0ocaui734" target="_blank" class="btn ex">
+                <span><i class="fas fa-rocket"></i> Explurger Profile</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+
+            <a href="https://nostra.gg/profile/b3ggaming" target="_blank" class="btn ns">
+                <span><i class="fas fa-gamepad"></i> Nostra Gaming</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 | B3G GAMING <br>
+            Designed for the community
+        </div>
+    </div>
+
+    <script>
+        // Visitor Counter (Simulated)
+        let count = parseInt(localStorage.getItem("visitors")) || 1240;
+        count += Math.floor(Math.random() * 3) + 1; 
+        localStorage.setItem("visitors", count);
+        document.getElementById("visitorCount").innerText = count.toLocaleString();
+
+        // YouTube Subscriber Logic
+        // To make this work, replace YOUR_API_KEY and YOUR_CHANNEL_ID
+        const apiKey = "YOUR_YOUTUBE_API_KEY";
+        const channelId = "UCXXXXXXXXXXXX"; 
+
+        if(apiKey !== "YOUR_YOUTUBE_API_KEY") {
+            fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`)
+                .then(res => res.json())
+                .then(data => {
+                    if(data.items) {
+                        const subs = data.items[0].statistics.subscriberCount;
+                        document.getElementById("subCount").innerText = parseInt(subs).toLocaleString();
+                    }
+                })
+                .catch(() => {
+                    document.getElementById("subCount").innerText = "10K+";
+                });
+        }
+    </script>
+</body>
+</html>
